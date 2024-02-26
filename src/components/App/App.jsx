@@ -4,7 +4,7 @@ import { SearchBox } from "../SearchBox/SearchBox.jsx";
 import { ContactForm } from "../ContactForm/ContactForm.jsx";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { fetchTasks } from "../../redux/operations.js";
+import { fetchContacts } from "../../redux/operations.js";
 
 //npm install react-redux
 //npm install redux-persist
@@ -14,7 +14,7 @@ import { fetchTasks } from "../../redux/operations.js";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchTasks());
+    dispatch(fetchContacts());
   }, [dispatch]);
 
   return (
